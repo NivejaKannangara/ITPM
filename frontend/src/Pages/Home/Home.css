@@ -1,0 +1,42 @@
+/* Adding margin to HomeBanner */
+.homebanner {
+    margin-bottom: 30px; /* Adjust the value as needed */
+  }
+  
+  /* Alternatively, add padding to the next section */
+  .category-section {
+    padding-top: 500px; /* Adds space above the content */
+  }
+  /* Make the home banner take up full height */
+.homebanner {
+    height: 100vh; /* 100% of the viewport height */
+    margin: 0 auto;
+    background: url('/header_img.jpg') no-repeat center center;
+    background-size: cover; /* Ensures the background image covers the whole area */
+    position: relative;
+  }
+  
+  /* You can adjust the text or other elements inside the banner as needed */
+  .homebanner-contents {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 1.2vw;
+    max-width: 50%;
+    bottom: 10%;
+    left: 6vw;
+    animation: fadeIn 3s;
+  }
+  
+  .homebanner-contents h2 {
+    font-weight: 500;
+    color: rgb(6, 6, 6);
+    font-size: max(4vw, 22px);
+  }
+  
+  .homebanner-contents p {
+    font-size: 1vw;
+    color: rgb(6, 6, 4);
+  }
+  

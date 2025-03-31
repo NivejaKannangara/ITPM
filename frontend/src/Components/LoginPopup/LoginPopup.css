@@ -1,0 +1,204 @@
+/* General popup background */
+.login-popup{
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    background-color: #00000090;
+    display: grid;
+  }
+  
+  /* Popup container */
+  .login-popup-container{
+    place-self: center;
+    width: max(23vh,330px);
+    color: #808080;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    gap: 25px;
+    padding: 25px 30px;
+    border-radius: 8px;
+    font-size: 14px;
+    animation: fadeIn 0.5s;
+  }
+  
+  /* Popup title section */
+  .login-popup-title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: black;
+  }
+  
+  .login-popup-title img{
+    width: 16px;
+    cursor: pointer;
+  }
+  
+  /* Input fields section */
+  .login-popup-inputs{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .login-popup-inputs input{
+    outline: none;
+    border: 1px solid #c9c9c9;
+    padding: 12px;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+  }
+  
+  
+  /* Button styling */
+  .login-popup-container button{
+    border: none;
+    padding: 12px;
+    border-radius: 5px;
+    color: white;
+    background-color: rgb(255, 38, 0);
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .login-popup-container button:hover{
+    background-color: #f62f2f;
+  }
+  
+  /* Terms and conditions section */
+  .login-popup-condition{
+    display: flex;
+    align-items: start;
+    gap: 8px;
+    margin-top: 8px;
+  }
+  
+  .login-popup-condition input{
+    margin-top: 5px;
+  }
+  
+  /* Styling for clickable links like 'Click here' */
+  .login-popup p span{
+    color: tomato;
+    font-weight: 500;
+    cursor: pointer;
+    transition: text-decoration 0.3s ease;
+  }
+  
+  .login-popup p span:hover{
+    text-decoration: underline;
+  }
+  
+  /* Add custom focus styles for email input */
+  .login-popup-inputs input[type="email"]:invalid {
+    border-color: red;
+  }
+  
+  .login-popup-inputs input[type="email"]:valid {
+    border-color: green;
+  }
+  
+  /* Password field border color when empty */
+  .login-popup-inputs input[type="password"]:required {
+    border-color: red; /* Highlight password field if empty */
+  }
+  
+  /* Styling for the 'OTP' and phone number input */
+  .login-popup-inputs input[type="text"],
+  .login-popup-inputs input[type="email"],
+  .login-popup-inputs input[type="password"] {
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  outline: none;
+  margin-bottom: 15px;
+  }
+  
+  .login-popup-inputs input:focus {
+  border-color: #007bff;
+  }
+  
+  /* Button full-width styling */
+  button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 10px;
+  }
+  
+  button:hover {
+  background-color: #0056b3;
+  }
+  
+  /* Checkbox and condition section styling */
+  .login-popup-condition {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+  }
+  
+  .login-popup-condition p {
+  font-size: 14px;
+  }
+  
+  .login-popup-condition input {
+  width: 15px;
+  height: 15px;
+  }
+  
+  /* NEW STYLES FOR PREFERENCES */
+.preferences-container {
+  margin: 15px 0;
+  border-top: 1px solid #eee;
+  padding-top: 15px;
+}
+
+.preference-group {
+  margin-bottom: 15px;
+}
+
+.preference-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+.radio-option {
+  display: flex;
+  align-items: center;
+  margin: 5px 0;
+  cursor: pointer;
+}
+
+.radio-option input {
+  margin-right: 8px;
+}
+
+.close-icon {
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+}
+
+/* Add to LoginPopup.css */
+.radio-options-horizontal {
+  display: flex;
+  gap: 15px;
+  margin-top: 5px;
+}
+
+.radio-options-horizontal .radio-option {
+  display: flex;
+  align-items: center;
+}

@@ -1,0 +1,138 @@
+/* General Header Styling */
+.header {
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f2eeee;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+  }
+  
+  /* Logo Styling */
+  .header .logo {
+    max-height: 100px;
+    margin-left: auto;
+    transition: transform 0.3s ease;
+  }
+  
+  /* Menu Styling */
+  .header-menu {
+    display: flex;
+    list-style: none;
+    gap: 200px; /* Adjust space between menu items */
+    font-size: 18px;
+    font-weight: 500;
+    color: #49557e;
+  }
+  
+  /* Menu Links */
+  .header-menu a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s ease;
+  }
+  
+  .header-menu a:hover {
+    color: #f93a25;
+  }
+  
+  /* Active menu item */
+  .header .active {
+    padding-bottom: 2px;
+    border-bottom: 2px solid #49557e;
+  }
+  
+  /* Right section (Cart & Sign-In/Log Out Button) */
+  .header-right {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Adjusted gap for better spacing */
+  }
+  
+  /* Icon Styling */
+  .icon {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .icon:hover {
+    transform: scale(1.1);
+  }
+  
+  /* Sign In Button */
+  .signin-button {
+    position: relative;  /* Enable relative positioning */
+    top: -8px;
+    background: transparent;
+    font-size: 16px;
+    color: #49557e;
+    border: 1px solid rgb(0, 0, 0);
+    padding: 10px 30px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    font-weight: bold;
+  }
+  
+  .signin-button:hover {
+    background-color: red;
+    color: white;
+    transform: scale(1.05);
+  }
+  
+  /* Log Out Button */
+  .logout-button {
+    position: relative;  /* Enable relative positioning */
+    top: -8px;
+    background: transparent;
+    font-size: 16px;
+    color: red;
+    border: 1px solid red;
+    padding: 10px 30px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    font-weight: bold;
+  }
+  
+  .logout-button:hover {
+    background-color: red;
+    color: white;
+    transform: scale(1.05);
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 900px) {
+    .header .logo {
+        width: 120px;
+    }
+  
+    .header-menu {
+        gap: 20px;
+        font-size: 16px;
+    }
+  
+    .header-right {
+        gap: 10px;
+    }
+  
+    .icon {
+        width: 20px;
+        height: 20px;
+    }
+  
+    .signin-button, .logout-button {
+        padding: 6px 20px;
+        font-size: 15px;
+    }
+  }
+  
+  /* Hide Menu on Small Screens */
+  @media (max-width: 768px) {
+    .header-menu {
+        display: none;
+    }
+  }
+  
