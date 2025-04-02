@@ -3,6 +3,7 @@ import cors from "cors";
 import dotenv from "dotenv";
 import { connectDB } from "./config/db.js"; // Import connectDB function
 import userRouter from "./routes/userRoute.js"; // Adjusted import path for user routes
+import employeeRouter from "./routes/employeeRoute.js";
 
 
 dotenv.config(); // Load .env variables
@@ -18,7 +19,7 @@ connectDB();
 
 // API Endpoints
 app.use("/api/users", userRouter); // Mount user routes (for registration, OTP verification, and login)
-
+app.use("/api/employees", employeeRouter);
 
 // Home Route
 app.get("/", (req, res) => {

@@ -1,49 +1,68 @@
 .homebanner {
+    width: 100%; /* Full width */
     height: 34vw;
-    margin: 30px auto;
+    margin: 0 auto; /* Remove top/bottom margin */
     background: url('/header_img.jpg') no-repeat;
-    background-size: contain;
+    background-size: cover; /* Changed from 'contain' to 'cover' */
+    background-position: center; /* Ensures image is centered */
     position: relative;
+    overflow: hidden; /* Prevents content overflow */
 }
 
 .homebanner-contents {
     position: absolute;
     display: flex;
     flex-direction: column;
-    align-items: start; /* Aligns content to the left */
+    align-items: start;
     gap: 1.2vw;
-    max-width: 50%; /* Controls the max width of the content */
+    max-width: 50%;
     bottom: 10%;
-    left: 0; /* Aligns content to the left */
+    left: 5%; /* Added left margin */
     animation: fadeIn 3s;
+    padding-right: 20px; /* Prevents text from touching edge */
 }
 
 .homebanner-contents h2 {
     font-weight: 500;
     color: rgb(6, 6, 6);
     font-size: max(4vw, 22px);
+    text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.8); /* Better readability */
 }
 
 .homebanner-contents p {
     font-size: 1vw;
     color: rgb(6, 6, 4);
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.5);
 }
 
-/* Making the banner responsive */
+/* Responsive adjustments */
 @media (max-width: 1050px) {
+    .homebanner {
+        height: 40vw; /* Slightly taller */
+    }
     .homebanner-contents {
-        max-width: 45%; /* Slightly reduce the content width on smaller screens */
+        max-width: 60%; /* More space for text */
     }
 }
 
 @media (max-width: 750px) {
+    .homebanner {
+        height: 50vw;
+    }
     .homebanner-contents {
-        max-width: 55%; /* Allow more space for the content */
+        max-width: 70%;
+        left: 3%;
     }
     .homebanner-contents p {
-        display: none; /* Hide the paragraph on smaller screens */
+        display: none;
     }
-    .homebanner-contents button {
-        padding: 2vw 4vw; /* Adjust button padding */
+}
+
+@media (max-width: 500px) {
+    .homebanner {
+        height: 60vw;
+    }
+    .homebanner-contents h2 {
+        font-size: max(5vw, 18px);
     }
 }

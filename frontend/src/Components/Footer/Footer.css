@@ -28,10 +28,10 @@
     text-align: left;
 }
 
-/* Adjusted Logo Size for Better Visibility */
+/* Logo Styling */
 .footer-content-left img {
-    max-height: 80px;  /* Shortened logo for better clarity */
-    max-width:300px;        /* Maintains aspect ratio */
+    max-height: 80px;
+    max-width: 300px;
     padding: 5px;
 }
 
@@ -58,13 +58,18 @@
 .footer-content-center li,
 .footer-content-right li {
     margin-bottom: 8px;
-    cursor: pointer;
     transition: color 0.3s ease-in-out;
 }
 
-.footer-content-center li:hover,
-.footer-content-right li:hover {
-    color: #f93a25;
+/* Employee Link Specific Styling */
+.footer-employee-link {
+    cursor: pointer;
+    color: inherit;
+}
+
+.footer-employee-link:hover {
+    color: tomato;
+    text-decoration: underline;
 }
 
 /* Social Icons */
@@ -123,3 +128,36 @@
         justify-content: center;
     }
 }
+/* Add these to your existing Footer.css */
+.employee-login-button {
+    background-color: #3498db;
+    border: none;
+    color: white;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background 0.3s;
+    margin-bottom: 15px;
+}
+
+.employee-login-button:hover {
+    background-color: #2980b9;
+}
+
+.logout-button {
+    background-color: #e74c3c;
+    border: none;
+    color: white;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background 0.3s;
+    margin-bottom: 15px;
+}
+
+.logout-button:hover {
+    background-color: #c0392b;
+}
+

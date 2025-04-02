@@ -1,0 +1,118 @@
+/* General popup background */
+.employee-login {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    background-color: #00000090;
+    display: grid;
+}
+  
+/* Popup container */
+.employee-login-container {
+    place-self: center;
+    width: max(23vh,330px);
+    color: #808080;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    gap: 25px;
+    padding: 25px 30px;
+    border-radius: 8px;
+    font-size: 14px;
+    animation: fadeIn 0.5s;
+}
+  
+/* Popup title section */
+.employee-login-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: black;
+}
+  
+.employee-login-title img {
+    width: 16px;
+    cursor: pointer;
+}
+  
+/* Input fields section */
+.employee-login-inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+  
+.employee-login-inputs input {
+    outline: none;
+    border: 1px solid #c9c9c9;
+    padding: 12px;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+  
+/* Button styling */
+.employee-login-container button {
+    border: none;
+    padding: 12px;
+    border-radius: 5px;
+    color: white;
+    background-color: rgb(255, 38, 0);
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+  
+.employee-login-container button:hover {
+    background-color: #f62f2f;
+}
+  
+/* Terms and conditions section */
+.employee-login-condition {
+    display: flex;
+    align-items: start;
+    gap: 8px;
+    margin-top: 8px;
+}
+  
+.employee-login-condition input {
+    margin-top: 5px;
+}
+  
+/* Styling for clickable links like 'Click here' */
+.employee-login p span {
+    color: tomato;
+    font-weight: 500;
+    cursor: pointer;
+    transition: text-decoration 0.3s ease;
+}
+  
+.employee-login p span:hover {
+    text-decoration: underline;
+}
+  
+/* Add custom focus styles for email input */
+.employee-login-inputs input[type="email"]:invalid {
+    border-color: red;
+}
+  
+.employee-login-inputs input[type="email"]:valid {
+    border-color: green;
+}
+  
+/* Password field border color when empty */
+.employee-login-inputs input[type="password"]:required {
+    border-color: red;
+}
+  
+.employee-login-inputs input:focus {
+    border-color: #007bff;
+}
+  
+.error-message {
+    color: red;
+    font-size: 14px;
+    margin-top: -15px;
+    margin-bottom: -10px;
+}
