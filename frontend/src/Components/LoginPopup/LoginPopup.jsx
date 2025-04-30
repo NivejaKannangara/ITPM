@@ -71,6 +71,7 @@ const LoginPopup = ({ setShowLogin }) => {
 
       if (response.data.token) {
         localStorage.setItem("token", response.data.token);
+        window.dispatchEvent(new Event('storage')); // ADDED THIS LINE
         setShowLogin(false);
       } else {
         setErrorMessage(response.data.message || "Login failed. Please try again.");
@@ -98,6 +99,7 @@ const LoginPopup = ({ setShowLogin }) => {
 
       if (response.status === 201) {
         localStorage.setItem("token", response.data.token);
+        window.dispatchEvent(new Event('storage')); // ADDED THIS LINE
         setShowLogin(false);
       } else {
         setErrorMessage(response.data.message || "Registration failed.");

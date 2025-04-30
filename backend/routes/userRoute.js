@@ -41,4 +41,4 @@ userRouter.get("/profile", authMiddleware, (req, res) => {
     });
 });
 
-export default userRouter;
+export default userRouter;        

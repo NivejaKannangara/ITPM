@@ -9,10 +9,12 @@ import HomeBanner from "./Components/HomeBanner/HomeBanner";
 import UserManagement from "../Admin/UserManagement";
 import EditUser from "../Admin/EditUser";
 import EmployeeManagement from "../Admin/EmployeeManagement";
+import Chatbot from "./Components/Chatbot/Chatbot";
 
 const AppContent = () => {
   const [showLogin, setShowLogin] = useState(false);
   const [showEmployeeLogin, setShowEmployeeLogin] = useState(false);
+  const [showChatbot, setShowChatbot] = useState(false); // Only chatbot state
   const location = useLocation();
 
   return (
@@ -20,6 +22,14 @@ const AppContent = () => {
       {/* Modals */}
       {showLogin && <LoginPopup setShowLogin={setShowLogin} />}
       {showEmployeeLogin && <EmployeeLogin setShowEmployeeLogin={setShowEmployeeLogin} />}
+      
+      {/* Chatbot Modal */}
+      {showChatbot && (
+        <Chatbot 
+          onClose={() => setShowChatbot(false)} 
+          isLoggedIn={!!localStorage.getItem('token')} 
+        />
+      )}
 
       {/* Header */}
       {location.pathname === "/" && <Header setShowLogin={setShowLogin} />}
@@ -31,11 +41,18 @@ const AppContent = () => {
           <Route path="/usermanagement" element={<UserManagement />} />
           <Route path="/edit-user/:id" element={<EditUser />} />
           <Route path="/employee-management" element={<EmployeeManagement />} />
-          <Route path="/" element={<Home />} />
+          <Route 
+            path="/" 
+            element={
+              <Home 
+                setShowChatbot={setShowChatbot} // Only passed to Home
+              />
+            } 
+          />
         </Routes>
       </main>
 
-      {/* Footer - now properly at bottom */}
+      {/* Footer - No chatbot props */}
       {location.pathname === "/" && <Footer setShowEmployeeLogin={setShowEmployeeLogin} />}
     </div>
   );

@@ -9,17 +9,22 @@ const Header = ({ setShowLogin }) => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    // Check if the user is logged in when component mounts
-    if (localStorage.getItem("token")) {
-      setIsLoggedIn(true);
-      navigate("/");
-    }
+    // Check initial login state
+    const token = localStorage.getItem("token");
+    setIsLoggedIn(!!token);
+
+    // Listen for storage changes
+    const handleStorageChange = () => {
+      setIsLoggedIn(!!localStorage.getItem("token"));
+    };
+
+    window.addEventListener('storage', handleStorageChange);
+    return () => window.removeEventListener('storage', handleStorageChange);
   }, []);
 
   const logout = () => {
-    console.log("Logging out...");
     localStorage.removeItem("token");
-    setIsLoggedIn(false);
+    window.dispatchEvent(new Event('storage')); // Trigger global update
     navigate("/");
   };
 
@@ -58,4 +63,3 @@ const Header = ({ setShowLogin }) => {
 };
 
 export default Header;
-
