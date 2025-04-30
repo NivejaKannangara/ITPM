@@ -1,0 +1,43 @@
+.home-ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center; /* Centers items horizontally */
+    align-items: center;
+    gap: 20px;
+    background-color: rgb(3, 43, 43);
+    height: 50px;
+}
+
+/* Style for list items */
+.home-ll {
+    padding: 10px 20px;
+    transition: 0.3s;
+}
+
+/* Style for links */
+.home {
+    text-decoration: none;
+    color: white;
+    font-size: 8px;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+}
+
+/* Hover effect */
+.home:hover {
+    color: #ffcc00; /* Change text color on hover */
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .home-ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .home-ll {
+        padding: 10px;
+    }
+}
