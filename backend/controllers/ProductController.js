@@ -102,6 +102,7 @@ exports.updateProduct = updateProduct;
 exports.deleteProduct = deleteProduct;
 */
 
+
 const Product = require('../Model/ProductModel');
 
 // Create Product
